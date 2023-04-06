@@ -1,0 +1,33 @@
+.headerCadastro {
+    margin: 80px 0 28px 48px;
+}
+
+.titleCadastro {
+    margin: 40px 0 28px 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #476EE6;
+}
+
+.boxNomeSenha {
+    display: flex;
+    margin: 0 0 26px 48px;
+}
+
+.boxEmailSenha {
+    display: flex;
+    margin: 0 0 36px 48px;
+}
+
+.form-group-nome, .form-group-email {
+    margin-right: 24px;
+}
+
+.labelCadastro {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.boxTermos {
+    margin: 0 0 62px 48px;
+}
