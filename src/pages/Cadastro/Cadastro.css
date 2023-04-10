@@ -1,5 +1,5 @@
 .headerCadastro {
-    margin: 80px 0 28px 48px;
+    margin: 60px 0 28px 48px;
 }
 
 .titleCadastro {
@@ -9,17 +9,29 @@
     color: #476EE6;
 }
 
-.boxNomeSenha {
+.boxNomeEmail {
     display: flex;
-    margin: 0 0 26px 48px;
+    flex-wrap: wrap;
+    margin: 0 0 0 48px;
 }
 
-.boxEmailSenha {
-    display: flex;
-    margin: 0 0 36px 48px;
+.form-group-nome, .form-group-senha, .form-group-email, .form-group-confirma-senha {
+    margin-bottom: 24px;
 }
 
-.form-group-nome, .form-group-email {
+.form-control {
+    min-width: 20vw;
+    height: 44px;
+    margin-top: 8px;
+}
+
+.boxSenhaConfirmaSenha {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 12px 48px;
+}
+
+.form-group-nome, .form-group-senha {
     margin-right: 24px;
 }
 
@@ -28,6 +40,78 @@
     font-weight: 500;
 }
 
+::placeholder {
+    color: #D7D7D7;
+    font-size: 14px;
+}
+
 .boxTermos {
-    margin: 0 0 62px 48px;
+    margin: 0 0 48px 48px;
+}
+
+.titleTermos {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.checkTermos {
+    display: flex;
+    margin: 0 40px 8px 0;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.6);
+    margin-left: 4px;
+}
+
+.textTermos {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 0 16px;
+}
+
+.text2Termos {
+    font-size: 13px;
+    margin: 0 0 0 32px;
+}
+
+.linkTermos {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.boxBtnCadastrar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.btnCadastrar {
+    background-color: #476EE6;
+    padding: 10px 68px;
+    border-radius: 60px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    user-select: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+.btnCadastrar:active {
+    box-shadow: 0 0 0 0 black, inset 1px 1px 1px black; 
+}
+
+.boxLinkLogin {
+    display:flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.textLinkLogin, .textLinkLogin2 {
+    font-size: 14px;
 }

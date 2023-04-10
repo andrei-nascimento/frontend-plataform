@@ -2,6 +2,7 @@ import React from "react";
 import waveBg from '../../assets/imgs/wave-bg.png';
 import logo from '../../assets/imgs/logo.png';
 import './Cadastro.css';
+import { Link } from "react-router-dom";
 
 function Cadastro() {
 
@@ -21,52 +22,52 @@ function Cadastro() {
 
                     <form>
                         <div className="formCadastro">
-                            <div className="boxNomeSenha">
+                            <div className="boxNomeEmail">
                                 <div className="form-group-nome">
-                                    <label for="inputNome" className="labelCadastro">Nome</label>
-                                    <input type="text" className="form-control" id="inputNome" placeholder="Digite seu nome" />
+                                    <label htmlFor="inputNome" className="labelCadastro">Nome</label>
+                                    <input type="text" className="form-control" id="inputNome" placeholder="Digite seu nome" required/>
                                 </div>
 
-                                <div className="form-group-senha">
-                                    <label for="inputSenha" className="labelCadastro">Senha</label>
-                                    <input type="text" className="form-control" id="inputSenha" placeholder="Digite sua senha" />
+                                <div className="form-group-email">
+                                    <label htmlFor="inputEmail" className="labelCadastro">E-mail</label>
+                                    <input type="email" className="form-control" id="inputEmail" placeholder="Digite seu e-mail" required/>
                                 </div>
                             </div>
 
-                            <div className="boxEmailSenha">
-                                <div className="form-group-email">
-                                    <label for="inputEmail" className="labelCadastro">E-mail</label>
-                                    <input type="text" className="form-control" id="inputEmail" placeholder="Digite seu e-mail" />
+                            <div className="boxSenhaConfirmaSenha">
+                                <div className="form-group-senha">
+                                    <label htmlFor="inputSenha" className="labelCadastro">Senha</label>
+                                    <input type="password" className="form-control" id="inputSenha" placeholder="Digite sua senha" required/>
                                 </div>
 
                                 <div className="form-group-confirma-senha">
-                                    <label for="inputConfirmaSenha" className="labelCadastro">Confirme sua senha</label>
-                                    <input type="text" className="form-control" id="inputConfirmaSenha" placeholder="Confirma senha" />
+                                    <label htmlFor="inputConfirmaSenha" className="labelCadastro">Confirme sua senha</label>
+                                    <input type="password" className="form-control" id="inputConfirmaSenha" placeholder="Confirma senha" required/>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    
 
                     <div className="boxTermos">
-                        <p>Termos de uso e privacidade</p>
-                        <div>
-                            <input type="checkbox" className="iptCheck"/>
-                            <p>Ao clicar neste botão, eu concordo com os termos de uso e privacidade da nossa empresa</p>
+                        <p className="titleTermos">Termos de uso e privacidade</p>
+                        <div className="checkTermos">
+                            <input type="checkbox"/>
+                            <p className="textTermos">Ao clicar neste botão, eu concordo com os termos de uso e privacidade da nossa empresa</p>
                         </div>
-                        <p>
-                            <a href="#">Termos de uso e Privacidade</a>
+                        <p className="text2Termos">
+                            <a href="#" className="linkTermos">Termos de uso e Privacidade</a>
                         </p>
                     </div>
 
-                    <div className="btnCadastrar">
-                        <p className="textCadastrar">Cadastrar</p>
+                    <div className="boxBtnCadastrar">
+                        <button className="btnCadastrar" type="submit">Cadastrar</button>
                     </div>
-
+                    </form>
                     <div className="boxLinkLogin">
-                        <p>Já tem uma conta?</p>
-                        <p>
-                            <a href="#">Login</a>
-                        </p>
+                        <p className="textLinkLogin">Já tem uma conta?</p>
+                        <Link to="/login">
+                            <p className="textLinkLogin2">Login</p>
+                        </Link>
                     </div>
 
                 </div>
