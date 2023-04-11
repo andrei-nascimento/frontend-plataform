@@ -1,0 +1,62 @@
+.headerLogin {
+    display: grid;
+    margin-top: 120px;
+    margin-bottom: 24px;
+    padding-left: 14%;
+}
+
+.titleLogin {
+    margin-top: 36px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #476EE6;
+}
+
+.formLogin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 48px;
+    gap: 24px;
+}
+
+#inputEmail-login, #inputSenha-login {
+    min-width: 35vw;
+    height: 44px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border-color: #D7D7D7;
+}
+
+.form-group-email-login, .form-group-senha-login {
+    margin: 0;
+}
+
+.boxBtnLogar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 32px 48px 32px;
+}
+
+.btnLogar {
+    background-color: #476EE6;
+    padding: 10px 54px;
+    border-radius: 60px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    user-select: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+.textEsqueceuSenha {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #476EE6;
+}
+
