@@ -1,0 +1,52 @@
+#toolbar-home {
+    height: 100vh;
+    border-radius: 0 20px 20px 0;
+}
+
+.menuLogo {
+    margin: 46px 48px 52px 28px;
+}
+
+.logotipoMenu {
+    width: 154px;
+}
+
+.playbooksMenu {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #F7F9FB;
+    margin: 0 12px 22px 12px;
+    gap: 16px;
+}
+
+.playbookTextMenu {
+    margin: 0;
+    color: #476EE6;
+    font-weight: 500;
+}
+
+.exemploMenu {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 0 12px 22px 12px;
+    gap: 16px;
+}
+
+.exemploTextMenu {
+    margin: 0;
+    color: #787486;
+    font-weight: 500;
+}
+
+.logoutMenu {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 150px 12px 22px 12px;
+    gap: 16px
+}

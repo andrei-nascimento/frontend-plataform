@@ -24,13 +24,13 @@ function Login() {
 
     if(user) {
         return console.log(user);
-    }
+    } 
 
     return (
         <div className="container-fluid">
             <div className="row">
 
-                <div className="col col-6 border p-0">
+                <div className="col col-6 p-0">
                         <div className="headerLogin">
                             <img src={logo} alt="logotipo" className="logotipo"/>
                             <p className="titleLogin">Dados de acesso</p>
@@ -58,7 +58,7 @@ function Login() {
                         </form>
                 </div>
 
-                <div className="col col-6 border p-0">
+                <div className="col col-6 border p-0" id="right-side-login">
                     <img src={waveBg} className="vh-100 w-100" alt="background"/>
                 </div>
             </div>

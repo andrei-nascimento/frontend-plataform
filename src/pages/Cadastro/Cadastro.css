@@ -9,6 +9,10 @@
     color: #476EE6;
 }
 
+#left-side-cadastro {
+    border-radius: 0 20px 20px 0;
+}
+
 .boxNomeEmail {
     display: flex;
     flex-wrap: wrap;

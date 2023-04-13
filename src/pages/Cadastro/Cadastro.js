@@ -26,11 +26,11 @@ function Cadastro() {
         <div className="container-fluid">
             <div className="row">
 
-                <div className="col col-6 border p-0">
+                <div className="col col-6 border p-0" id="left-side-cadastro">
                     <img src={waveBg} className="vh-100 w-100" alt="background"/>
                 </div>
 
-                <div className="col col-6 border p-0">
+                <div className="col col-6 p-0">
                     <div className="headerCadastro">
                         <img src={logo} alt="logotipo" className="logotipo"/>
                         <p className="titleCadastro">Cadastro</p>
