@@ -1,0 +1,36 @@
+#playbooksMain {
+    background-color: #F7F9FB;
+}
+
+.playbooksHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 38px 62px 40px 62px;
+}
+
+.playbooksTitle {
+    font-size: 32px;
+    font-weight: 600;
+    color: #476EE6;
+    margin: 0;
+}
+
+.perfilFixedMenu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 60px;
+    padding: 8px 16px 8px 10px;
+}
+
+.userImage {
+    width: 42px;
+}
+
+.userName {
+    margin: 0;
+
+}
