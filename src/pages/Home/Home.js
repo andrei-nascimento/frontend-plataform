@@ -3,6 +3,7 @@ import Menu from '../../components/Menu/Menu';
 import arrowIcon from '../../assets/imgs/arrow-icon.png';
 import userImage from '../../assets/imgs/user-image.png';
 import Categorias from '../../components/Categorias/Categorias';
+import Card from '../../components/Card/Card';
 
 function Home() {
 
@@ -26,7 +27,13 @@ function Home() {
                         </div>
                     </div>
 
-                    <Categorias />
+                    <div className="mainComponents">
+                        <Categorias />
+                        <div className="mainCards">
+                            <Card />
+                            <Card />
+                        </div>
+                    </div>
 
                 </div>
 

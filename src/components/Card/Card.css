@@ -1,0 +1,46 @@
+.cardContainer {
+    max-width: 50vw;
+    max-height: 35vh;
+    background-color: #FFFFFF;
+    margin: 0 62px 20px 0;
+    padding: 14px 0 22px 0;
+    border-radius: 10px;
+    border: 1px solid #D8D8D8;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.cardTitle {
+    font-weight: 600;
+    color: #101828;
+    margin: 0;
+}
+
+.btnEditar {
+    background-color: #476EE6;
+    color: #FFFFFF;
+    padding: 8px 32px;
+    margin: 0;
+    border-radius: 60px;
+}
+
+.cardLine {
+    height: 1px;
+    width: 100%;
+    background-color: #E8E8E8;
+    margin: 14px 0 22px 0;
+}
+
+.cardDescriptionBox {
+    margin: 0 24px 0 24px;
+}
+
+.cardDescriptionText {
+    margin: 0;
+}

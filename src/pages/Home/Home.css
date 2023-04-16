@@ -32,5 +32,12 @@
 
 .userName {
     margin: 0;
+}
 
+.mainComponents {
+    display: flex;
+}
+
+.mainCards {
+    width: 100%;
 }
