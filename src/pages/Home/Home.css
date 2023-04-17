@@ -41,3 +41,16 @@
 .mainCards {
     width: 100%;
 }
+
+.btnAddCard { 
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    background-color: #476EE6;
+    padding: 25px;
+    border-radius: 50px;
+}

@@ -2,6 +2,7 @@ import './Home.css';
 import Menu from '../../components/Menu/Menu';
 import arrowIcon from '../../assets/imgs/arrow-icon.png';
 import userImage from '../../assets/imgs/user-image.png';
+import addWhiteIcon from '../../assets/imgs/add-white-icon.png';
 import Categorias from '../../components/Categorias/Categorias';
 import Card from '../../components/Card/Card';
 
@@ -32,7 +33,12 @@ function Home() {
                         <div className="mainCards">
                             <Card />
                             <Card />
+                            <Card />
                         </div>
+                    </div>
+
+                    <div className="btnAddCard">
+                        <img src={addWhiteIcon} alt="ícone de adição" />
                     </div>
 
                 </div>
