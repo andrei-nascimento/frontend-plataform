@@ -1,14 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { auth } from "../../services/firebaseConfig";
 import waveBg from '../../assets/imgs/wave-bg.png';
 import logo from '../../assets/imgs/logo.png';
 import './Login.css';
-import { Link } from "react-router-dom";
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from "../../services/firebaseConfig";
 
 function Login() {
-
+    let navigate = useNavigate();
+    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
@@ -16,6 +17,7 @@ function Login() {
     function handleSignIn(e) {
         e.preventDefault();
         signInWithEmailAndPassword(email, password);
+        navigate("/home");
     }
 
     if(loading) {
@@ -50,7 +52,9 @@ function Login() {
                             </div>
 
                             <div className="boxBtnLogar">
-                                <button className="btnLogar" type="submit" onClick={handleSignIn}>Entrar</button>
+                                <button className="btnLogar" type="submit" onClick={handleSignIn}>
+                                    Entrar
+                                </button>
                                 <Link to="/">
                                     <p className="textEsqueceuSenha">Esqueceu a senha?</p>
                                 </Link>

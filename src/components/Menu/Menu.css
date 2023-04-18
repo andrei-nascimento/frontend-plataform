@@ -1,6 +1,5 @@
 #toolbar-home {
     height: 100vh;
-    border-radius: 0 20px 20px 0;
 }
 
 .menuLogo {
@@ -19,6 +18,7 @@
     background-color: #F7F9FB;
     margin: 0 12px 22px 12px;
     gap: 16px;
+    cursor: pointer;
 }
 
 .playbookTextMenu {
@@ -34,6 +34,7 @@
     border-radius: 8px;
     margin: 0 12px 22px 12px;
     gap: 16px;
+    cursor: pointer;
 }
 
 .exemploTextMenu {
@@ -49,4 +50,8 @@
     border-radius: 8px;
     margin: 150px 12px 22px 12px;
     gap: 16px
+}
+
+.link {
+    text-decoration: none;
 }

@@ -1,0 +1,75 @@
+.contaHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 38px 62px 54px 62px;
+}
+
+.contaTitle {
+    font-size: 32px;
+    font-weight: 600;
+    color: #476EE6;
+    margin: 0;
+}
+
+.contaContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 50vw;
+    margin-bottom: 64px;
+}
+
+.userImageBox {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.contaUserImage {
+    width: 115px;
+}
+
+.cameraIcon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.form-group-email-conta, .form-group-senha-conta, .form-group-nome-conta, .form-group-numero-conta {
+    
+}
+
+.boxNomeEmailConta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 32px 0 32px;
+    gap: 24px;
+}
+
+.boxSenhaNumeroConta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 28px 32px 48px 32px;
+    gap: 24px;
+}
+
+.btnSalvarBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.btnSalvarDados {
+    background-color: #476EE6;
+    color: #FFFFFF;
+    padding: 8px 54px;
+    margin: 0;
+    border-radius: 60px;
+}
