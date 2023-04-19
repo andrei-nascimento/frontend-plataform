@@ -9,9 +9,9 @@ import { useContext } from 'react';
 import { AuthGoogleContext } from '../../contexts/authGoogle';
 
 function Home() {
-    const { user } = useContext(AuthGoogleContext);
-    let userLogado = JSON.parse(user);
-    console.log(userLogado)
+    // const { user } = useContext(AuthGoogleContext);
+    // let userLogado = JSON.parse(user);
+    // console.log(userLogado)
 
     return(
         <div className="container-fluid">

@@ -7,8 +7,12 @@ import userIcon from '../../assets/imgs/user-icon.png';
 import logoutIcon from '../../assets/imgs/logout-icon.png';
 import { Link } from "react-router-dom";
 import './Menu.css';
+import { useContext } from 'react';
+import { AuthGoogleContext } from '../../contexts/authGoogle';
 
 function Menu() {
+    const { signOut } = useContext(AuthGoogleContext);
+
     return(
         <div className="col col-2 p-0" id="toolbar-home">
             <div className="menuLogo">
@@ -44,12 +48,10 @@ function Menu() {
                 </div>
             </Link>
 
-            <Link to="/login" className="link">
-                <div className="logoutMenu">
-                    <img src={logoutIcon} alt='ícone de logout'/>
-                    <p className="exemploTextMenu">Sair</p>
-                </div>
-            </Link>
+            <div className="logoutMenu" onClick={() => signOut()}>
+                <img src={logoutIcon} alt='ícone de logout'/>
+                <p className="exemploTextMenu">Sair</p>
+            </div>
 
         </div>
     )

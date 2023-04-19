@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from "../../services/firebaseConfig";
 import waveBg from '../../assets/imgs/wave-bg.png';
@@ -16,6 +16,8 @@ function Login() {
     const [password, setPassword] = useState('');
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
+    let navigate = useNavigate();
+
     function handleSignIn(e) {
         e.preventDefault();
         signInWithEmailAndPassword(email, password);
@@ -28,6 +30,11 @@ function Login() {
     if(user) {
         return console.log(user);
     } 
+
+    if(error) {
+        console.log(error);
+        alert('Usuário não encontrado!')
+    }
 
     async function loginGoogle() {
         await signInGoogle();

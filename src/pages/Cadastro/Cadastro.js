@@ -3,19 +3,21 @@ import { useState } from "react";
 import waveBg from '../../assets/imgs/wave-bg.png';
 import logo from '../../assets/imgs/logo.png';
 import './Cadastro.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from "../../services/firebaseConfig";
 
 function Cadastro() {
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
 
+    let navigate = useNavigate();
+
     function handleRegister(e) {
         e.preventDefault();
         createUserWithEmailAndPassword(email, password);
+        (email && password ? navigate("/") : alert("Insira os dados para cadastrar!"));
     }
 
     if(loading) {

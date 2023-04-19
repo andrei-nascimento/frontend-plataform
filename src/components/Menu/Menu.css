@@ -49,7 +49,8 @@
     padding: 8px 12px;
     border-radius: 8px;
     margin: 150px 12px 22px 12px;
-    gap: 16px
+    gap: 16px;
+    cursor: pointer;
 }
 
 .link {
