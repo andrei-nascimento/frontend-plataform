@@ -1,10 +1,13 @@
 import React from "react";
 import { AppRoutes } from "./routes/AppRoutes";
+import { AuthGoogleProvider } from "./contexts/authGoogle";
 
 function App() {
 
   return (
-    <AppRoutes />
+    <AuthGoogleProvider>
+      <AppRoutes />
+    </AuthGoogleProvider>
   );
 }
 
