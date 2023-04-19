@@ -8,8 +8,8 @@ export function AppRoutes() {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Cadastro />} />
-                <Route path='/login' element={<Login />} />
+                <Route path='/' element={<Login />} />
+                <Route path='/cadastro' element={<Cadastro />} />
                 <Route path='/home' element={<Home />} />
                 <Route path='/conta' element={<Conta />} />
             </Routes>

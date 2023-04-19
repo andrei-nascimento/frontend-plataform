@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from "../../services/firebaseConfig";
 import waveBg from '../../assets/imgs/wave-bg.png';
@@ -8,7 +8,6 @@ import logo from '../../assets/imgs/logo.png';
 import './Login.css';
 
 function Login() {
-    let navigate = useNavigate();
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,7 +16,6 @@ function Login() {
     function handleSignIn(e) {
         e.preventDefault();
         signInWithEmailAndPassword(email, password);
-        navigate("/home");
     }
 
     if(loading) {
@@ -57,6 +55,13 @@ function Login() {
                                 </button>
                                 <Link to="/">
                                     <p className="textEsqueceuSenha">Esqueceu a senha?</p>
+                                </Link>
+                            </div>
+
+                            <div className="boxCadastrar">
+                                <p className="boxCadastrarText">Não possui uma conta?</p>
+                                <Link to="/cadastro">
+                                <p className="boxCadastrarText">Cadastre-se</p>
                                 </Link>
                             </div>
                         </form>

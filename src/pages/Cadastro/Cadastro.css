@@ -112,10 +112,12 @@ input[type="checkbox"] {
 .boxLinkLogin {
     display:flex;
     justify-content: center;
-    gap: 32px;
+    gap: 8px;
     margin-bottom: 24px;
 }
 
-.textLinkLogin, .textLinkLogin2 {
+.textLinkLogin {
     font-size: 14px;
+    font-weight: 500;
+
 }

@@ -83,8 +83,8 @@ function Cadastro() {
 
                     <div className="boxLinkLogin">
                         <p className="textLinkLogin">Já tem uma conta?</p>
-                        <Link to="/login">
-                            <p className="textLinkLogin2">Login</p>
+                        <Link to="/">
+                            <p className="textLinkLogin">Login</p>
                         </Link>
                     </div>
 

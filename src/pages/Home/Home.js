@@ -8,8 +8,6 @@ import Card from '../../components/Card/Card';
 
 function Home() {
 
-
-
     return(
         <div className="container-fluid">
             <div className="row" id="row">

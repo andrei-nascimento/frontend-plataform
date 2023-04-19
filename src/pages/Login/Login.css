@@ -64,3 +64,15 @@
     color: #476EE6;
 }
 
+.boxCadastrar {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.boxCadastrarText {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
