@@ -1,40 +1,43 @@
 import React, { useContext } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from "../../services/firebaseConfig";
 import waveBg from '../../assets/imgs/wave-bg.png';
 import logo from '../../assets/imgs/logo.png';
 import googleIcon from "../../assets/imgs/google-icon.png";
+import loadingIcon from "../../assets/imgs/loading-icon.gif";
 import './Login.css';
 import { AuthGoogleContext } from "../../contexts/authGoogle";
+import { toast } from 'react-toastify';
+
 
 function Login() {
     const { signInGoogle, signed } = useContext(AuthGoogleContext);
-
+    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
-
-    let navigate = useNavigate();
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);   
 
     function handleSignIn(e) {
         e.preventDefault();
         signInWithEmailAndPassword(email, password);
+        
+        let testeUser = (user ? user.email : "não autenticado")
+        console.log(testeUser)
     }
 
     if(loading) {
-        return <p>Carregando...</p>;
+        return (
+            <div className="loadingBox">
+                <img className="loadingIcon" src={loadingIcon} alt="ícone de carregamento" />
+            </div>
+        )
     }
-
-    if(user) {
-        return console.log(user);
-    } 
 
     if(error) {
         console.log(error);
-        alert('Usuário não encontrado!')
-    }
+    } 
 
     async function loginGoogle() {
         await signInGoogle();

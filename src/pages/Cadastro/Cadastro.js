@@ -2,10 +2,13 @@ import React from "react";
 import { useState } from "react";
 import waveBg from '../../assets/imgs/wave-bg.png';
 import logo from '../../assets/imgs/logo.png';
+import loadingIcon from "../../assets/imgs/loading-icon.gif";
 import './Cadastro.css';
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from "../../services/firebaseConfig";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Cadastro() {
     const [email, setEmail] = useState('');
@@ -17,11 +20,39 @@ function Cadastro() {
     function handleRegister(e) {
         e.preventDefault();
         createUserWithEmailAndPassword(email, password);
-        (email && password ? navigate("/") : alert("Insira os dados para cadastrar!"));
+
+        if(email && password) { 
+            navigate("/") 
+            toast.success('Usuário cadastrado com sucesso!', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
+        } else {
+            toast.error('Preencha todos os campos para se cadastrar!', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+        }
     }
 
     if(loading) {
-        return <p>Carregando...</p>;
+        return (
+            <div className="loadingBox">
+                <img className="loadingIcon" src={loadingIcon} alt="ícone de carregamento" />
+            </div>
+        )
     }
 
     return (

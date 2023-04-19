@@ -110,3 +110,10 @@
     font-weight: 500;
     margin: 0;
 }
+
+.loadingBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+}
+

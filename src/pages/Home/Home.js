@@ -5,14 +5,13 @@ import userImage from '../../assets/imgs/user-image.png';
 import addWhiteIcon from '../../assets/imgs/add-white-icon.png';
 import Categorias from '../../components/Categorias/Categorias';
 import Card from '../../components/Card/Card';
-import { useContext } from 'react';
-import { AuthGoogleContext } from '../../contexts/authGoogle';
+//import { useContext, useEffect, useState } from 'react';
+//import { AuthGoogleContext } from '../../contexts/authGoogle';
+//import { toast } from 'react-toastify';
 
 function Home() {
-    // const { user } = useContext(AuthGoogleContext);
-    // let userLogado = JSON.parse(user);
-    // console.log(userLogado)
-
+    //const { user } = useContext(AuthGoogleContext);
+    
     return(
         <div className="container-fluid">
             <div className="row" id="row">

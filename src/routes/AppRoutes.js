@@ -4,10 +4,12 @@ import Login from "../pages/Login/Login";
 import Home from "../pages/Home/Home";
 import Conta from "../pages/Conta/Conta";
 import { PrivateRoutes } from "./PrivateRoutes";
+import { ToastContainer } from 'react-toastify';
 
 export function AppRoutes() {
     return(
         <BrowserRouter>
+        <ToastContainer />
             <Routes>
                 <Route path='/' element={<Login />} />
                 <Route path='/cadastro' element={<Cadastro />} />
