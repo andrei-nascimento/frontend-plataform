@@ -9,8 +9,21 @@ import './Conta.css';
 
 function Conta() {
     const { user } = useContext(AuthGoogleContext);
-    let userLogado = JSON.parse(user);
-    console.log(userLogado)
+    let userLogado = {};
+    if (user) {
+    try {
+        userLogado = JSON.parse(user);
+    } catch (e) {
+        console.error("Erro ao fazer parse do JSON:", e);
+    }
+    if (userLogado && userLogado.photoURL) {
+        console.log(userLogado.photoURL);
+    } else {
+        console.error("Usuário não possui foto.");
+    }
+    } else {
+    console.error("Usuário não definido.");
+}
 
     return(
         <div className="container-fluid">
@@ -40,12 +53,12 @@ function Conta() {
                             <div className="boxNomeEmailConta">
                                 <div className="form-group-nome-conta">
                                     <label htmlFor="inputNome" className="labelCadastro">Nome</label>
-                                    <input type="text" className="form-control" id="inputNome" placeholder="Digite seu nome" required/>
+                                    <input type="text" value={userLogado.displayName} className="form-control" id="inputNome" placeholder="Digite seu nome" required/>
                                 </div>
 
                                 <div className="form-group-email-conta">
                                     <label htmlFor="inputEmail" className="labelCadastro">E-mail</label>
-                                    <input type="email" className="form-control" id="inputEmail" placeholder="Digite seu e-mail"/>
+                                    <input type="email" value={userLogado.email} className="form-control" id="inputEmailConta" placeholder="Digite seu e-mail"/>
                                 </div>
                             </div>
 
