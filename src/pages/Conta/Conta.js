@@ -2,9 +2,16 @@ import Menu from '../../components/Menu/Menu';
 import arrowIcon from '../../assets/imgs/arrow-icon.png';
 import userImage from '../../assets/imgs/user-image.png';
 import cameraIcon from '../../assets/imgs/camera-icon.png';
+import { useContext, useEffect, useState } from 'react';
+import { AuthGoogleContext } from '../../contexts/authGoogle';
+import { toast } from 'react-toastify';
 import './Conta.css';
 
 function Conta() {
+    const { user } = useContext(AuthGoogleContext);
+    let userLogado = JSON.parse(user);
+    console.log(userLogado)
+
     return(
         <div className="container-fluid">
             <div className="row">
@@ -17,15 +24,15 @@ function Conta() {
                         <p className="contaTitle">Minha Conta</p>
 
                         <div className="perfilFixedMenu">
-                            <img className="userImage" src={userImage} alt="imagem de perfil" />
-                            <p className="userName">Ana Carolina</p>
+                            <img className="userImage" src={userLogado.photoURL} alt="imagem de perfil" />
+                            <p className="userName">{userLogado.displayName}</p>
                             <img src={arrowIcon} alt="arrow icon" />
                         </div>
                     </div>
 
                     <div className="contaContainer">
                         <div className="userImageBox">
-                            <img className="contaUserImage" src={userImage} alt="foto de perfil" />
+                            <img className="contaUserImage" src={userLogado.photoURL} alt="foto de perfil" />
                             <img className="cameraIcon" src={cameraIcon} alt="ícone de alterar foto" />
                         </div>
 

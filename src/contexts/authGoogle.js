@@ -7,7 +7,7 @@ const provider = new GoogleAuthProvider();
 export const AuthGoogleContext = createContext({})
 
 export const AuthGoogleProvider = ({ children }) => {
-    const authG = getAuth(app);
+    const auth = getAuth(app);
     const [user, setUser] = useState(null);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export const AuthGoogleProvider = ({ children }) => {
     }, [])
 
     const signInGoogle = () => {
-        signInWithPopup(authG, provider)
+        signInWithPopup(auth, provider)
         .then((result) => {
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;

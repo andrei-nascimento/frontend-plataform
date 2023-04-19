@@ -28,6 +28,7 @@
 
 .userImage {
     width: 42px;
+    border-radius: 50px;
 }
 
 .userName {

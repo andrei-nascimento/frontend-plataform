@@ -32,16 +32,13 @@
 
 .contaUserImage {
     width: 115px;
+    border-radius: 100px;
 }
 
 .cameraIcon {
     position: absolute;
     bottom: 0;
     right: 0;
-}
-
-.form-group-email-conta, .form-group-senha-conta, .form-group-nome-conta, .form-group-numero-conta {
-    
 }
 
 .boxNomeEmailConta {
