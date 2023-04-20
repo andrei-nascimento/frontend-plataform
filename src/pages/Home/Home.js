@@ -5,9 +5,8 @@ import userImage from '../../assets/imgs/user-image.png';
 import addWhiteIcon from '../../assets/imgs/add-white-icon.png';
 import Categorias from '../../components/Categorias/Categorias';
 import Card from '../../components/Card/Card';
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { AuthGoogleContext } from '../../contexts/authGoogle';
-import { toast } from 'react-toastify';
 
 function Home() {
     const { user } = useContext(AuthGoogleContext);
@@ -26,8 +25,8 @@ function Home() {
                         <p className="playbooksTitle">Playbooks</p>
 
                         <div className="perfilFixedMenu">
-                            <img className="userImage" src={userLogado.photoURL} alt="imagem de perfil" />
-                            <p className="userName">{userLogado.displayName}</p>
+                            <img className="userImage" src={userImage} alt="imagem de perfil" />
+                            <p className="userName">Ana Vitória</p>
                             <img src={arrowIcon} alt="arrow icon" />
                         </div>
                     </div>

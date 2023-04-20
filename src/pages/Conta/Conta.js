@@ -2,28 +2,28 @@ import Menu from '../../components/Menu/Menu';
 import arrowIcon from '../../assets/imgs/arrow-icon.png';
 import userImage from '../../assets/imgs/user-image.png';
 import cameraIcon from '../../assets/imgs/camera-icon.png';
-import { useContext, useEffect, useState } from 'react';
-import { AuthGoogleContext } from '../../contexts/authGoogle';
-import { toast } from 'react-toastify';
+// import { useContext, useEffect, useState } from 'react';
+// import { AuthGoogleContext } from '../../contexts/authGoogle';
+// import { toast } from 'react-toastify';
 import './Conta.css';
 
 function Conta() {
-    const { user } = useContext(AuthGoogleContext);
-    let userLogado = {};
-    if (user) {
-    try {
-        userLogado = JSON.parse(user);
-    } catch (e) {
-        console.error("Erro ao fazer parse do JSON:", e);
-    }
-    if (userLogado && userLogado.photoURL) {
-        console.log(userLogado.photoURL);
-    } else {
-        console.error("Usuário não possui foto.");
-    }
-    } else {
-    console.error("Usuário não definido.");
-}
+//     const { user } = useContext(AuthGoogleContext);
+//     let userLogado = {};
+//     if (user) {
+//         try {
+//             userLogado = JSON.parse(user);
+//         } catch (e) {
+//             console.error("Erro ao fazer parse do JSON:", e);
+//         }
+//         if (userLogado && userLogado.photoURL) {
+//             console.log(userLogado.photoURL);
+//         } else {
+//             console.error("Usuário não possui foto.");
+//         }
+//     } else {
+//     console.error("Usuário não definido.");
+// }
 
     return(
         <div className="container-fluid">
@@ -37,15 +37,15 @@ function Conta() {
                         <p className="contaTitle">Minha Conta</p>
 
                         <div className="perfilFixedMenu">
-                            <img className="userImage" src={userLogado.photoURL} alt="imagem de perfil" />
-                            <p className="userName">{userLogado.displayName}</p>
+                            <img className="userImage" src={userImage} alt="imagem de perfil" />
+                            <p className="userName">Ana Vitória</p>
                             <img src={arrowIcon} alt="arrow icon" />
                         </div>
                     </div>
 
                     <div className="contaContainer">
                         <div className="userImageBox">
-                            <img className="contaUserImage" src={userLogado.photoURL} alt="foto de perfil" />
+                            <img className="contaUserImage" src={userImage} alt="foto de perfil" />
                             <img className="cameraIcon" src={cameraIcon} alt="ícone de alterar foto" />
                         </div>
 
@@ -53,12 +53,12 @@ function Conta() {
                             <div className="boxNomeEmailConta">
                                 <div className="form-group-nome-conta">
                                     <label htmlFor="inputNome" className="labelCadastro">Nome</label>
-                                    <input type="text" value={userLogado.displayName} className="form-control" id="inputNome" placeholder="Digite seu nome" required/>
+                                    <input type="text" value="Ana Vitória" className="form-control" id="inputNome" placeholder="Digite seu nome" required/>
                                 </div>
 
                                 <div className="form-group-email-conta">
                                     <label htmlFor="inputEmail" className="labelCadastro">E-mail</label>
-                                    <input type="email" value={userLogado.email} className="form-control" id="inputEmailConta" placeholder="Digite seu e-mail"/>
+                                    <input type="email" value="anavitoria@gmail.com" className="form-control" id="inputEmailConta" placeholder="Digite seu e-mail"/>
                                 </div>
                             </div>
 
